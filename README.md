@@ -4843,8 +4843,6 @@
 <html lang="en">
 <body>
     <div class="container">
-        <h1>Welcome!</h1>
-        <p>This is your control panel (now static).</p>
         
         <hr>
         
@@ -4903,12 +4901,12 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <title>Formular de Înregistrare</title>
+    <title>registration form</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Înregistrare Utilizator Nou</h1>
+    <h1>New User Registration</h1>
 
     <form method="POST"> 
     </form>
