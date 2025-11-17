@@ -41,14 +41,7 @@
 
         <form method="POST"> 
     </form>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br>
-
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="parola" required><br>
-
-            <input type="submit" value="Login">
-        
+           
         
         <p style="text-align: center; margin-top: 20px;">
             <a href="register.html">Don't have an account? Register here</a>
@@ -129,7 +122,7 @@
         <label for="parola">password:</label><br>
         <input type="password" id="parola" name="parola" required><br><br>
 
-        <input type="submit" value="Înregistrează-te">
+        <input type="submit" value="submit">
    
 
 </body>
