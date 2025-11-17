@@ -4912,16 +4912,16 @@
 
     <form method="POST"> 
     </form>
-        <label for="nume">Nume Complet:</label><br>
-        <input type="text" id="nume" name="nume" required><br><br>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
 
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email" required><br><br>
 
-        <label for="parola">Parolă:</label><br>
-        <input type="password" id="parola" name="parola" required><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="parola" required><br><br>
 
-        <input type="submit" value="Înregistrează-te">
+        <input type="submit" value="register yourself">
    
 
 </body>
