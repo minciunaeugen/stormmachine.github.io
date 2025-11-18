@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storm Machine Entertainment - Equipment Hire</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* ==================================================== */
+        /* 1. BASE & GENERAL CSS (Consistent) */
+        /* ==================================================== */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 60px; /* Space for fixed header */
+            background-color: #f7f7f7; 
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* ==================================================== */
+        /* 2. HEADER & NAVIGATION (FIXED BAR) - Consistent */
+        /* ==================================================== */
+        .header {
+            background-color: #000;
+            color: #fff;
+            padding: 5px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            padding: 0 20px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links.left-links, .nav-links.right-links {
+            flex-basis: 45%; 
+        }
+
+        .nav-links.left-links {
+            justify-content: flex-start;
+        }
+
+        .nav-links.right-links {
+            justify-content: flex-end;
+        }
+
+        .nav-links a {
+            padding: 0 8px;
+            font-size: 13px;
+            font-weight: bold;
+            transition: color 0.3s;
+            white-space: nowrap; 
+        }
+
+        .nav-links a:hover {
+            color: #ffcc00;
+        }
+
+        .logo {
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .logo img {
+            height: 30px; 
+            margin-right: 5px;
+        }
+        
+        /* ==================================================== */
+        /* 3. FOOTER - Consistent */
+        /* ==================================================== */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+             max-width: 1200px;
+             margin: 0 auto;
+             display: flex;
+             justify-content: space-around;
+             align-items: center;
+             flex-wrap: wrap; 
+        }
+
+        .footer-info, .footer-links, .footer-social {
+            margin: 10px 20px;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 15px;
+            transition: color 0.3s;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: #ffcc00;
+        }
+
+        .footer-social a {
+            font-size: 1.5em;
+            margin: 0 10px;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .footer-social a:hover {
+            color: #ffcc00;
+        }
+        
+        /* ==================================================== */
+        /* 4. EQUIPMENT PAGE SPECIFIC CSS (Product Grid) */
+        /* ==================================================== */
+        
+        .equipment-hero {
+            position: relative;
+            background-color: #555; /* Darker/Neutral theme for Equipment */
+            padding: 40px 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .equipment-hero h1 {
+            font-size: 40px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+        
+        .equipment-hero p {
+            max-width: 800px;
+            margin: 10px auto 0;
+            font-size: 18px;
+        }
+
+        .product-grid-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        .product-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: left;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-content {
+            padding: 20px;
+        }
+        
+        .product-content h3 {
+            color: #555;
+            margin-top: 0;
+            font-size: 24px;
+        }
+        
+        .product-content p {
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 12px 0;
+            background-color: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #e0b300;
+        }
+
+        @media (max-width: 600px) {
+            .equipment-hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="navbar">
+            <div class="nav-links left-links">
+                <a href="marquees.html">MARQUEES</a>
+                <a href="discos.html">DISCOS</a>
+                <a href="jaysbars.html">JAY'S BARS</a>
+                <a href="equipment.html">EQUIPMENT HIRE</a> <a href="chairs.html">CHAIRS</a> 
+            </div>
+            
+            <div class="logo">
+                <a href="index.html"><img src="images/stormmachine-logo.png" alt="Storm Machine Logo" style="height: 30px;"></a>
+                <span>stormmachine</span>
+            </div>
+            
+            <div class="nav-links right-links">
+                <a href="login.html">LOGIN</a> 
+                <a href="register.html">REGISTER</a>
+                <a href="gallery.html">GALLERY</a>
+                <a href="information.html">INFORMATION</a>
+                <a href="testimonialspage.html">TESTIMONIALS</a> 
+                <a href="contact.html">CONTACT US</a>
+                <a href="#"><i class="fas fa-info-circle"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="equipment-hero">
+        <h1>Essential Equipment for Your Event</h1>
+        <p>Reliable sound, spectacular lighting, and secure power solutions—everything you need to make your event run smoothly.</p>
+    </section>
+
+    <section class="product-grid-section">
+        <h2>Power, Sound, and Effects</h2>
+        
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <img src="images/echipament-sunet.jpg" alt="Sound System Hire">
+                <div class="product-content">
+                    <h3>PA & Sound Systems</h3>
+                    <p>High-quality speaker and microphone rental for speeches, live music, and background ambience in any size venue.</p>
+                    <a href="contact.html" class="cta-button">Request Sound Quote</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/echipament-lumini.jpg" alt="Event Lighting Hire">
+                <div class="product-content">
+                    <h3>Event Lighting Packages</h3>
+                    <p>Uplighting, dance floor effects, lasers, and stage wash lighting to transform your venue into a party atmosphere.</p>
+                    <a href="contact.html" class="cta-button">Request Lighting Quote</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/generator.jpg" alt="Generator Hire">
+                <div class="product-content">
+                    <h3>Generators & Power Solutions</h3>
+                    <p>Reliable, silent generators and distribution boxes, ensuring consistent power for remote locations and large marquees.</p>
+                    <a href="contact.html" class="cta-button">Request Power Quote</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="images/masina-fum.jpg" alt="Smoke Machine Hire">
+                <div class="product-content">
+                    <h3>Special Effects Machines</h3>
+                    <p>Hire smoke/fog machines, dry ice effects, bubble machines, and snow effects for unforgettable moments.</p>
+                    <a href="contact.html" class="cta-button">Request FX Quote</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p><strong>CONTACT US</strong></p>
+                <p>CALL US: 0722 123 456</p>
+            </div>
+            <div class="footer-links">
+                <a href="marquees.html">MARQUEES</a>
+                <a href="discos.html">DISCOS</a>
+                <a href="jaysbars.html">JAY'S BARS</a>
+                <a href="equipment.html">EQUIPMENT HIRE</a>
+                <a href="information.html">INFORMATION</a>
+            </div>
+            <div class="footer-social">
+                <p>Follow us</p>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
