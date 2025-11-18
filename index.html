@@ -27,7 +27,7 @@
         }
 
         /* ==================================================== */
-        /* 2. HEADER & NAVIGATION (FIXED BAR) */
+        /* 2. HEADER & NAVIGATION (FIXED BAR) - STRUCTURĂ CORECTATĂ */
         /* ==================================================== */
         .header {
             background-color: #000; /* Black background */
@@ -43,7 +43,8 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            justify-content: space-between;
+            /* CORECTAT: Spațiere uniformă între cele 3 blocuri: Linkuri Stânga, Logo, Linkuri Dreapta */
+            justify-content: space-between; 
             align-items: center;
             padding: 0 20px;
             text-transform: uppercase;
@@ -52,6 +53,17 @@
         .nav-links {
             display: flex;
             align-items: center;
+        }
+
+        /* NOU: Asigură că cele două blocuri de link-uri au lățimea necesară, lăsând spațiu pentru Logo în centru */
+        .nav-links.left-links {
+            justify-content: flex-start;
+            flex-grow: 1;
+        }
+
+        .nav-links.right-links {
+            justify-content: flex-end;
+            flex-grow: 1;
         }
 
         .nav-links a {
@@ -69,6 +81,8 @@
             margin: 0 30px;
             display: flex;
             align-items: center;
+            /* CORECTAT: Asigură că blocul logo este centrat și unic */
+            flex-shrink: 0; 
         }
 
         .logo img {
@@ -82,7 +96,7 @@
         .hero {
             position: relative;
             height: 500px; 
-            /* IMAGE URL PROVIDED BY USER SNIPPET */
+            /* IMAGE URL PRESERVED */
             background-image: url('https://www.mesteresti.ro/uploads/4400/cort-profesional-evenimente-extra-ambrus_5-m_12-m_2%2C8-m_Alb_Party_Da_Da_60-m%C2%B2_peste-50_Otel.jpeg');
             background-size: cover;
             background-position: center;
@@ -182,7 +196,7 @@
             font-weight: 600;
         }
 
-        /* Specific background images (preserved exactly as requested) */
+        /* Specific background images (PRESERVED) */
         #box-quote { background-image: url('https://eventstuff.ro/wp-content/uploads/2021/07/interior-cort-nunt-transparent.jpg'); }
         #box-marquees { background-image: url('https://www.aristocrat-events.ro/wp-content/uploads/2024/08/image01-1024x768.jpeg'); }
         #box-discos { background-image: url('https://eventstuff.ro/wp-content/uploads/2020/06/23.-corturi-pagoda-transparente-pt-nunta.jpeg'); }
@@ -295,20 +309,26 @@
 
     <header class="header">
         <div class="navbar">
-            <div class="nav-links">
+            <div class="nav-links left-links">
                 <a href="marquees.html">MARQUEES</a>
                 <a href="discos.html">DISCOS</a>
                 <a href="jaysbars.html">JAY'S BARS</a>
                 <a href="equipment.html">EQUIPMENT HIRE</a>
-                <a href="chairs.html">CHAIRS</a> </div>
+                <a href="chairs.html">CHAIRS</a> 
+            </div>
+            
             <div class="logo">
                 <a href="index.html"><img src="images/stormmachine-logo.png" alt="Storm Machine Logo" style="height: 30px;"></a>
                 <span>stormmachine</span>
             </div>
-            <div class="nav-links">
+            
+            <div class="nav-links right-links">
+                <a href="login.html">LOGIN</a> 
+                <a href="register.html">REGISTER</a>
                 <a href="gallery.html">GALLERY</a>
                 <a href="information.html">INFORMATION</a>
-                <a href="#testimonials-section">TESTIMONIALS</a> <a href="contact.html">CONTACT US</a>
+                <a href="#testimonials-section">TESTIMONIALS</a> 
+                <a href="contact.html">CONTACT US</a>
                 <a href="#"><i class="fas fa-info-circle"></i></a>
             </div>
         </div>
