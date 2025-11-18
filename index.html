@@ -2,37 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css"> 
-</head>
-<body>
-
-    <nav style="padding: 10px; background-color: #f0f0f0;">
-        <a href="index.html" style="margin-right: 15px;">🏠 Home</a>
-        <a href="chairs.html" style="margin-right: 15px;">Chairs</a>
-        <a href="testimonials.html" style="margin-right: 15px;">Testimonials</a>
-        <a href="contact_us.html" style="margin-right: 15px;">📞 Contact Us</a> 
-        <a href="welcomepage.html" style="margin-right: 15px;">⭐ Welcome</a>
-        <a href="login.html" style="margin-right: 15px;">Login</a>
-        <a href="register.html" style="margin-right: 15px;">Register</a>
-        <a href="read_users.html" style="margin-right: 15px;">Admin Panel</a>
-    </nav>
-    <hr>
-    <marquee direction="left" scrollamount="5" style="background-color: #ffcccc; color: #333; padding: 5px;">
-        Welcome! Don't forget to check out our Chairs section!
-    </marquee>
-
-    <h1>Welcome to Our Site!</h1>
-    <p>This is the main home page. Please use the navigation menu above.</p>
-
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Storm Machine Entertainment - Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -68,11 +37,11 @@
             padding: 0 20px;
             text-transform: uppercase;
         }
-
-        .logo a {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ffcc00; /* Logo color */
+        
+        /* New CSS for Logo Image */
+        .logo a img {
+            height: 50px; /* Set the height for the logo */
+            vertical-align: middle;
         }
 
         .nav-links a {
@@ -87,9 +56,8 @@
         }
 
         /* ---------------------------------------------------- */
-        /* Hero Section */
+        /* Hero Section (Main Banner Image) */
         .hero {
-            /* Image URL can be changed */
             background: url('https://upload.wikimedia.org/wikipedia/commons/b/b3/Marquee_Events_at_London_Olympics_2012.jpg') no-repeat center center/cover;
             height: 60vh;
             display: flex;
@@ -284,7 +252,9 @@
 
     <header class="header">
         <div class="navbar">
-            <div class="logo"><a href="index.html">Storm Machine</a></div>
+            <div class="logo">
+                <a href="index.html"><img src="images/stormmachine-logo.png" alt="Storm Machine Logo"></a>
+            </div>
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="jaysbars.html">Jay's Bars</a>
