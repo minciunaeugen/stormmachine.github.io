@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Storm Machine Entertainment - Contact Us</title>
+    <title>Storm Machine Entertainment - Get in Touch</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <style>
         /* ==================================================== */
-        /* 1. BASE & GENERAL CSS (Consistent) */
+        /* BASE & LAYOUT CSS */
         /* ==================================================== */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             padding-top: 60px; /* Space for fixed header */
-            background-color: #f7f7f7; 
+            background-color: #f4f4f4; 
             color: #333;
             line-height: 1.6;
         }
@@ -25,9 +25,7 @@
             color: inherit;
         }
         
-        /* ==================================================== */
-        /* 2. HEADER & NAVIGATION (FIXED BAR) - IDENTICAL STRUCTURE */
-        /* ==================================================== */
+        /* HEADER & NAVIGATION */
         .header {
             background-color: #000;
             color: #fff;
@@ -52,7 +50,8 @@
             display: flex;
             align-items: center;
         }
-
+        
+        /* Ensure navigation links are spread out */
         .nav-links.left-links, .nav-links.right-links {
             flex-basis: 45%; 
         }
@@ -89,9 +88,7 @@
             margin-right: 5px;
         }
         
-        /* ==================================================== */
-        /* 3. FOOTER - IDENTICAL STRUCTURE */
-        /* ==================================================== */
+        /* FOOTER */
         .footer {
             background-color: #333;
             color: #fff;
@@ -108,85 +105,69 @@
              flex-wrap: wrap; 
         }
 
-        .footer-info, .footer-links, .footer-social {
-            margin: 10px 20px;
-        }
-
-        .footer-links a {
+        .footer-links a, .footer-social a {
             color: #fff;
-            margin: 0 15px;
-            transition: color 0.3s;
-            display: inline-block;
-        }
-
-        .footer-links a:hover {
-            color: #ffcc00;
-        }
-
-        .footer-social a {
-            font-size: 1.5em;
             margin: 0 10px;
-            color: #fff;
             transition: color 0.3s;
         }
 
-        .footer-social a:hover {
+        .footer-links a:hover, .footer-social a:hover {
             color: #ffcc00;
         }
         
         /* ==================================================== */
-        /* 4. CONTACT PAGE SPECIFIC CSS */
+        /* CONTACT SPECIFIC CSS (Cleaned Up) */
         /* ==================================================== */
         
-        .contact-hero {
-            position: relative;
-            height: 250px;
-            /* Corrected: Using a public image URL to avoid 404 errors due to missing local files. */
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1520697960105-d9134a625cc1?fit=crop&w=1200&q=80') center/cover; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
+        .contact-section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .contact-section h1 {
             text-align: center;
-        }
-
-        .contact-hero h1 {
-            font-size: 40px;
+            font-size: 36px;
+            color: #0d83d1;
+            margin-bottom: 50px;
             text-transform: uppercase;
+            border-bottom: 3px solid #ffcc00;
+            display: inline-block;
+            padding-bottom: 5px;
         }
-
-        .contact-container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
+        
+        .content-wrapper {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
             gap: 30px;
         }
 
-        .contact-info, .contact-form-container {
-            flex: 1 1 45%; 
+        .contact-form-container, .contact-details {
+            flex: 1;
             min-width: 300px;
-            padding: 20px;
             background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
-
-        .contact-info h2, .contact-form-container h2 {
-            color: #0d83d1;
-            border-bottom: 2px solid #ffcc00;
-            padding-bottom: 10px;
+        
+        /* Contact Details List */
+        .contact-details h2 {
+            color: #000;
+            margin-top: 0;
             margin-bottom: 20px;
         }
 
-        .contact-info p {
-            margin-bottom: 10px;
+        .detail-item {
+            margin-bottom: 15px;
+            font-size: 17px;
         }
         
-        .contact-info i {
+        .detail-item i {
             color: #0d83d1;
-            margin-right: 10px;
+            margin-right: 15px;
+            width: 20px; /* Ensures alignment */
+            text-align: center;
         }
 
         /* Form Styling */
@@ -200,23 +181,23 @@
         .contact-form input[type="email"],
         .contact-form textarea {
             width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #ddd;
             border-radius: 4px;
             box-sizing: border-box;
         }
 
         .contact-form textarea {
             resize: vertical;
-            min-height: 100px;
+            min-height: 150px;
         }
 
         .contact-form button {
             display: block;
             width: 100%;
-            padding: 12px;
-            margin-top: 25px;
+            padding: 15px;
+            margin-top: 30px;
             background-color: #ffcc00;
             color: #000;
             font-weight: bold;
@@ -224,40 +205,17 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            font-size: 18px;
             transition: background-color 0.3s;
         }
 
         .contact-form button:hover {
             background-color: #e0b300;
         }
-        
-        /* Map Section */
-        .map-section {
-            width: 100%;
-            margin-top: 30px;
-            padding: 0 20px 40px;
-            box-sizing: border-box;
-        }
-        
-        .map-section h2 {
-            text-align: center;
-            color: #0d83d1;
-            margin-bottom: 20px;
-        }
-
-        .map-embed {
-            width: 100%;
-            height: 450px;
-            border: 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
 
         @media (max-width: 768px) {
-            .contact-container {
+            .content-wrapper {
                 flex-direction: column;
-            }
-            .contact-info, .contact-form-container {
-                flex: 1 1 100%;
             }
         }
     </style>
@@ -285,58 +243,59 @@
                 <a href="gallery.html">GALLERY</a>
                 <a href="information.html">INFORMATION</a>
                 <a href="testimonialspage.html">TESTIMONIALS</a> 
-                <a href="contactuspage.html">CONTACT US</a>
-                <a href="#"><i class="fas fa-info-circle"></i></a>
+                <a href="contact.html">CONTACT US</a> <a href="#"><i class="fas fa-info-circle"></i></a>
             </div>
         </div>
     </header>
 
-    <section class="contact-hero">
-        <h1>Contact Us for Your Event Quote</h1>
-    </section>
-
-    <section class="contact-container">
+    <section class="contact-section">
+        <h1 style="margin: 0 auto; text-align: center;">Get in Touch With Storm Machine</h1>
         
-        <div class="contact-info">
-            <h2>Our Details</h2>
-            <p><i class="fas fa-map-marker-alt"></i> **Address:** 123 Event Lane, London, SW1A 0AA, UK</p>
-            <p><i class="fas fa-phone"></i> **Phone:** +40 722 123 456</p>
-            <p><i class="fas fa-envelope"></i> **Email:** <a href="mailto:info@stormmachine.com">info@stormmachine.com</a></p>
-            <p><i class="fas fa-clock"></i> **Hours:** Mon - Fri: 9:00 AM - 5:00 PM</p>
-            <p style="margin-top: 25px;">We aim to respond to all inquiries within 24 business hours. Please include your event date and location for a faster quote.</p>
+        <div class="content-wrapper">
+            
+            <div class="contact-details">
+                <h2>Our Contact Information</h2>
+                <p>We are here to help you plan your perfect event. Feel free to reach out via phone, email, or by filling out the form.</p>
+                
+                <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i> **Address:** 123 Event Lane, London, SW1A 0AA, UK
+                </div>
+                
+                <div class="detail-item">
+                    <i class="fas fa-phone"></i> **Phone:** +40 722 123 456
+                </div>
+                
+                <div class="detail-item">
+                    <i class="fas fa-envelope"></i> **Email:** <a href="mailto:info@stormmachine.com">info@stormmachine.com</a>
+                </div>
+                
+                <div class="detail-item">
+                    <i class="fas fa-clock"></i> **Hours:** Mon - Fri: 9:00 AM - 5:00 PM
+                </div>
+                
+                <p style="margin-top: 30px; color: #555;">**Quick Tip:** Include your event date and estimated guest count for the fastest quote response.</p>
+            </div>
+            
+            <div class="contact-form-container">
+                <h2>Send Us an Enquiry</h2>
+                <form class="contact-form" action="#" method="POST">
+                    
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input type="text" id="phone" name="phone">
+                    
+                    <label for="message">Your Message / Event Details *</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
         </div>
-        
-        <div class="contact-form-container">
-            <h2>Send Us a Message</h2>
-            <form class="contact-form" action="#" method="POST">
-                
-                <label for="name">Full Name *</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="phone">Phone Number</label>
-                <input type="text" id="phone" name="phone">
-                
-                <label for="message">Your Message / Event Details *</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit">Submit Inquiry</button>
-            </form>
-        </div>
-
-    </section>
-    
-    <section class="map-section">
-        <h2>Find Our Location</h2>
-        <iframe 
-            class="map-embed" 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.903823775013!2d-0.12775838435198!3d51.5073509796357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604d306b8e219%3A0x6b772c51ffc2c5d1!2sWestminster%2C%20London!5e0!3m2!1sen!2suk!4v1677819230558!5m2!1sen!2suk" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
     </section>
 
     <footer class="footer">
