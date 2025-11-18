@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storm Machine Entertainment - Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* ==================================================== */
+        /* 1. BASE & GENERAL CSS (Consistent) */
+        /* ==================================================== */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 60px; /* Space for fixed header */
+            background-color: #f7f7f7; 
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* ==================================================== */
+        /* 2. HEADER & NAVIGATION (FIXED BAR) - Consistent */
+        /* ==================================================== */
+        .header {
+            background-color: #000;
+            color: #fff;
+            padding: 5px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            padding: 0 20px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links.left-links, .nav-links.right-links {
+            flex-basis: 45%; 
+        }
+
+        .nav-links.left-links {
+            justify-content: flex-start;
+        }
+
+        .nav-links.right-links {
+            justify-content: flex-end;
+        }
+
+        .nav-links a {
+            padding: 0 8px;
+            font-size: 13px;
+            font-weight: bold;
+            transition: color 0.3s;
+            white-space: nowrap; 
+        }
+
+        .nav-links a:hover {
+            color: #ffcc00;
+        }
+
+        .logo {
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .logo img {
+            height: 30px; 
+            margin-right: 5px;
+        }
+        
+        /* ==================================================== */
+        /* 3. FOOTER - Consistent */
+        /* ==================================================== */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+             max-width: 1200px;
+             margin: 0 auto;
+             display: flex;
+             justify-content: space-around;
+             align-items: center;
+             flex-wrap: wrap; 
+        }
+
+        .footer-info, .footer-links, .footer-social {
+            margin: 10px 20px;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 15px;
+            transition: color 0.3s;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: #ffcc00;
+        }
+
+        .footer-social a {
+            font-size: 1.5em;
+            margin: 0 10px;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .footer-social a:hover {
+            color: #ffcc00;
+        }
+        
+        /* ==================================================== */
+        /* 4. GALLERY PAGE SPECIFIC CSS */
+        /* ==================================================== */
+        
+        .gallery-hero {
+            position: relative;
+            background-color: #0d83d1;
+            padding: 40px 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .gallery-hero h1 {
+            font-size: 40px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+        
+        .gallery-hero p {
+            max-width: 800px;
+            margin: 10px auto 0;
+            font-size: 18px;
+        }
+
+        .gallery-section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 600px) {
+            .gallery-hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="navbar">
+            <div class="nav-links left-links">
+                <a href="marquees.html">MARQUEES</a>
+                <a href="discos.html">DISCOS</a>
+                <a href="jaysbars.html">JAY'S BARS</a>
+                <a href="equipment.html">EQUIPMENT HIRE</a>
+                <a href="chairs.html">CHAIRS</a> 
+            </div>
+            
+            <div class="logo">
+                <a href="index.html"><img src="images/stormmachine-logo.png" alt="Storm Machine Logo" style="height: 30px;"></a>
+                <span>stormmachine</span>
+            </div>
+            
+            <div class="nav-links right-links">
+                <a href="login.html">LOGIN</a> 
+                <a href="register.html">REGISTER</a>
+                <a href="gallery.html">GALLERY</a> <a href="information.html">INFORMATION</a>
+                <a href="testimonialspage.html">TESTIMONIALS</a> 
+                <a href="contact.html">CONTACT US</a>
+                <a href="#"><i class="fas fa-info-circle"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="gallery-hero">
+        <h1>Our Event Portfolio</h1>
+        <p>See the quality of our work and the versatility of our hire range. Get inspiration for your perfect event.</p>
+    </section>
+
+    <section class="gallery-section">
+        <h2 style="text-align: center; margin-bottom: 30px;">Events & Equipment Highlights</h2>
+        
+        <div class="image-grid">
+            
+            <div class="gallery-item">
+                <img src="images/galerie-cort.jpg" alt="Luxury Marquee Interior">
+                <div class="image-caption">Marquees & Tents</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/galerie-bar.jpg" alt="Mobile Bar Setup">
+                <div class="image-caption">Jay's Mobile Bars</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/galerie-scaune.jpg" alt="Wedding Chairs and Tables">
+                <div class="image-caption">Seating & Dining</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/galerie-disco.jpg" alt="Disco and DJ Setup">
+                <div class="image-caption">Discos & Entertainment</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/galerie-lumini.jpg" alt="Ambient Event Lighting">
+                <div class="image-caption">Venue Lighting</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/galerie-setup.jpg" alt="Complete Event Setup">
+                <div class="image-caption">Full Event Setup</div>
+            </div>
+
+        </div>
+        
+        <p style="text-align: center; margin-top: 40px; font-style: italic;">Need more inspiration? <a href="contact.html" style="color: #0d83d1; font-weight: bold;">Contact us</a> to discuss your vision.</p>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p><strong>CONTACT US</strong></p>
+                <p>CALL US: 0722 123 456</p>
+            </div>
+            <div class="footer-links">
+                <a href="marquees.html">MARQUEES</a>
+                <a href="discos.html">DISCOS</a>
+                <a href="jaysbars.html">JAY'S BARS</a>
+                <a href="equipment.html">EQUIPMENT HIRE</a>
+                <a href="information.html">INFORMATION</a>
+            </div>
+            <div class="footer-social">
+                <p>Follow us</p>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
