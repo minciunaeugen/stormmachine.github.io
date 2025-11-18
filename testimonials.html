@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Storm Machine Entertainment - Testimonials</title>
+    <title>Storm Machine Entertainment - Customer Testimonials</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <style>
         /* ==================================================== */
-        /* 1. BASE & GENERAL CSS (Consistent with index.html) */
+        /* 1. BASE & GENERAL CSS (Consistent) */
         /* ==================================================== */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            padding-top: 60px; /* Spațiu pentru header-ul fix */
-            background-color: #f7f7f7; /* Fundal mai deschis pentru a evidenția recenziile */
+            padding-top: 60px; /* Space for fixed header */
+            background-color: #f7f7f7; 
             color: #333;
             line-height: 1.6;
         }
@@ -26,7 +26,7 @@
         }
         
         /* ==================================================== */
-        /* 2. HEADER & NAVIGATION (FIXED BAR) - STRUCTURĂ IDENTICĂ */
+        /* 2. HEADER & NAVIGATION (FIXED BAR) - Consistent */
         /* ==================================================== */
         .header {
             background-color: #000;
@@ -90,7 +90,7 @@
         }
         
         /* ==================================================== */
-        /* 3. FOOTER - STRUCTURĂ IDENTICĂ */
+        /* 3. FOOTER - Consistent */
         /* ==================================================== */
         .footer {
             background-color: #333;
@@ -139,70 +139,72 @@
         /* ==================================================== */
         
         .testimonials-hero {
+            position: relative;
+            background-color: #333; /* Dark background for Testimonials */
+            padding: 40px 20px;
             text-align: center;
-            padding: 80px 20px 40px;
-            background-color: #fff;
-            border-bottom: 2px solid #ddd;
+            color: #fff;
         }
 
         .testimonials-hero h1 {
-            font-size: 36px;
-            color: #0d83d1; /* Blue color */
-            margin-bottom: 10px;
+            font-size: 40px;
             text-transform: uppercase;
+            margin: 0;
+            color: #ffcc00;
         }
-
+        
         .testimonials-hero p {
+            max-width: 800px;
+            margin: 10px auto 0;
             font-size: 18px;
-            color: #555;
         }
 
-        .testimonials-container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
+        .testimonials-section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-grid {
             display: grid;
-            /* Două coloane pe ecrane mari */
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
         .testimonial-card {
             background-color: #fff;
             padding: 30px;
-            border-left: 5px solid #ffcc00; /* Bară galbenă de accent */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            border-radius: 5px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            text-align: center;
         }
 
-        .testimonial-card h4 {
-            font-size: 18px;
-            color: #000;
-            margin-top: 0;
+        .rating {
+            color: #ffcc00; /* Gold/Yellow for stars */
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .quote-icon {
+            color: #0d83d1;
+            font-size: 2.5em;
             margin-bottom: 15px;
         }
 
         .testimonial-card p {
             font-style: italic;
+            margin-bottom: 20px;
             color: #555;
-            margin-bottom: 10px;
         }
 
-        .testimonial-card .client-name {
-            display: block;
-            text-align: right;
+        .author {
             font-weight: bold;
-            color: #0d83d1;
-            font-style: normal;
-            margin-top: 15px;
+            color: #333;
+            margin-top: 10px;
+            display: block;
         }
-        
-        @media (max-width: 768px) {
-            .testimonials-container {
-                /* O singură coloană pe ecrane mici */
-                grid-template-columns: 1fr;
-            }
-        }
+
     </style>
 </head>
 <body>
@@ -227,8 +229,7 @@
                 <a href="register.html">REGISTER</a>
                 <a href="gallery.html">GALLERY</a>
                 <a href="information.html">INFORMATION</a>
-                <a href="testimonialspage.html">TESTIMONIALS</a> 
-                <a href="contact.html">CONTACT US</a>
+                <a href="testimonialspage.html">TESTIMONIALS</a> <a href="contact.html">CONTACT US</a>
                 <a href="#"><i class="fas fa-info-circle"></i></a>
             </div>
         </div>
@@ -236,47 +237,44 @@
 
     <section class="testimonials-hero">
         <h1>What Our Clients Say</h1>
-        <p>A collection of feedback from happy customers across all our event services.</p>
+        <p>Over the years, we have helped hundreds of clients create memorable events. Read their feedback below.</p>
     </section>
 
-    <section class="testimonials-container">
+    <section class="testimonials-section">
+        <h2 style="text-align: center; margin-bottom: 40px; color: #0d83d1;">Trusted for Weddings, Parties, and Corporate Events</h2>
         
-        <div class="testimonial-card">
-            <h4>Thank you for everything!</h4>
-            <p>"We had the most amazing time and you and your team really pulled out all the stops for us! Sincere thanks and we will certainly be recommending you to all of our friends."</p>
-            <span class="client-name">- Sarah & John D. (Wedding)</span>
-        </div>
+        <div class="testimonial-grid">
+            
+            <div class="testimonial-card">
+                <div class="rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                <p>The marquee was absolutely stunning and set up perfectly on time. The team handled everything, from flooring to lighting, making our wedding day stress-free. Highly recommend Storm Machine!</p>
+                <span class="author">Sarah & Tom, Wedding Clients</span>
+            </div>
 
-        <div class="testimonial-card">
-            <h4>Outstanding Service and Equipment!</h4>
-            <p>"The marquee was set up perfectly and the Jay's Bar service was a huge hit. Everything ran smoothly and professionally from start to finish. Highly recommend Storm Machine Entertainment."</p>
-            <span class="client-name">- Corporate Events Ltd. (Gala)</span>
-        </div>
+            <div class="testimonial-card">
+                <div class="rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                <p>Jay's Bars provided the best mobile bar service we've ever used. The cocktails were top-notch, and the bartenders were professional, fast, and extremely friendly. A huge hit with all our guests.</p>
+                <span class="author">Mark L., Corporate Event Organizer</span>
+            </div>
 
-        <div class="testimonial-card">
-            <h4>Fantastic Disco Setup</h4>
-            <p>"The DJ and lighting equipment for our party were absolutely fantastic. The sound quality was superb, and the team was extremely friendly and accommodating with our last-minute requests. Five stars!"</p>
-            <span class="client-name">- Maria P. (Birthday Party)</span>
+            <div class="testimonial-card">
+                <div class="rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                <p>We hired the PA system and generator for our garden party. Equipment was clean, reliable, and delivered exactly as promised. The instructions were clear and the staff were very helpful.</p>
+                <span class="author">Olivia P., Private Party Hire</span>
+            </div>
+            
         </div>
         
-        <div class="testimonial-card">
-            <h4>Chairs and Furniture were Perfect</h4>
-            <p>"We rented 200 Chiavari chairs and several folding tables. All items were delivered on time and were in pristine condition. They truly elevated the look of our venue. Thank you for the quality hire!"</p>
-            <span class="client-name">- Events Bucharest (Venue Rental)</span>
-        </div>
-        
-        <div class="testimonial-card">
-            <h4>Seamless Process</h4>
-            <p>"The entire booking process, from the initial quote to the dismantling of the equipment, was seamless and stress-free. Your team is incredibly reliable. We will be repeat customers!"</p>
-            <span class="client-name">- Alex M. (Private Event)</span>
-        </div>
-        
-        <div class="testimonial-card">
-            <h4>The best in the business!</h4>
-            <p>"From the gorgeous marquee to the top-tier sound system, everything exceeded expectations. Their attention to detail made our special day truly magical."</p>
-            <span class="client-name">- The Popescu Family</span>
-        </div>
-        
+        <p style="text-align: center; margin-top: 50px;">Ready to book your event? <a href="contact.html" style="color: #0d83d1; font-weight: bold;">Get in touch now</a>.</p>
     </section>
 
     <footer class="footer">
