@@ -12,8 +12,7 @@
 <hr>
 <h1>Welcome to the Home Page!</h1>
 <p>Please use the navigation above to access the login or registration forms.</p>   
-   <h1>Bine ați venit!</h1>
-<p>Aceasta este pagina principală a site-ului. Folosiți meniul de navigare de mai sus.</p>
+  
 	<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +40,5 @@
     <h1>Welcome to Our Site!</h1>
     <p>This is the main home page. Please use the navigation menu above.</p>
 
-</body>
-</html>
 </body>
 </html>
