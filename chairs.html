@@ -28,66 +28,35 @@
         /* ==================================================== */
         /* 2. HEADER & NAVIGATION (FIXED BAR) - Identical Structure */
         /* ==================================================== */
-        .header {
-            background-color: #000;
-            color: #fff;
-            padding: 5px 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        .navbar {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between; 
-            align-items: center;
-            padding: 0 20px;
-            text-transform: uppercase;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-links.left-links, .nav-links.right-links {
-            flex-basis: 45%; 
-        }
-
-        .nav-links.left-links {
-            justify-content: flex-start;
-        }
-
-        .nav-links.right-links {
-            justify-content: flex-end;
-        }
-
-        .nav-links a {
-            padding: 0 8px;
-            font-size: 13px;
-            font-weight: bold;
-            transition: color 0.3s;
-            white-space: nowrap; 
-        }
-
-        .nav-links a:hover {
-            color: #ffcc00;
-        }
-
-        .logo {
-            margin: 0 10px;
-            display: flex;
-            align-items: center;
-            flex-shrink: 0;
-        }
-
-        .logo img {
-            height: 30px; 
-            margin-right: 5px;
-        }
+       <header class="header">
+    <div class="navbar">
+        
+        <div class="logo">
+            <a href="index.html"><img src="images/stormmachine-logo.png" alt="Storm Machine Logo" style="height: 30px;"></a>
+            <span>stormmachine</span>
+        </div>
+        
+        <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        
+        <div class="nav-links" id="mobileMenu">
+            <a href="marquees.html">MARQUEES</a>
+            <a href="discos.html">DISCOS</a>
+            <a href="jaysbars.html">JAY'S BARS</a>
+            <a href="equipment.html">EQUIPMENT HIRE</a>
+            <a href="chairs.html">CHAIRS</a> 
+            
+            <a href="login.html">LOGIN</a> 
+            <a href="register.html">REGISTER</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="information.html">INFORMATION</a>
+            <a href="testimonialspage.html">TESTIMONIALS</a> 
+            <a href="contact.html">CONTACT US</a>
+            <a href="#"><i class="fas fa-info-circle"></i></a>
+        </div>
+    </div>
+</header>
         
         /* ==================================================== */
         /* 3. FOOTER - Identical Structure */
