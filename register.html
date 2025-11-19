@@ -5,26 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Storm Machine - Register</title>
     
-    <link rel="stylesheet" href="style.css">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
     
     <style>
-        /* Stiluri pentru a asigura ca pagina are spatiu deasupra antetului fix */
+        /* ==================================================== */
+        /* BASE & RESET */
+        /* ==================================================== */
         body {
-            padding-top: 60px; /* A se potrivi cu inaltimea header-ului */
             font-family: Arial, sans-serif;
             margin: 0;
+            padding: 0;
+            padding-top: 60px; /* Spațiu pentru bara fixă */
+            background-color: #f8f8f8; /* Un fundal ușor gri, ca al paginilor de conținut */
+            color: #333;
             line-height: 1.6;
-            overflow-x: hidden; /* Fix pentru scroll lateral */
+            overflow-x: hidden;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
         }
 
-        /* Stiluri pentru a centra formularul, exact cum ați dorit (doar chenarul) */
+        /* ==================================================== */
+        /* HEADER (Navbar Negru) */
+        /* ==================================================== */
+        .header {
+            background-color: #000;
+            color: #fff;
+            padding: 5px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 3px solid #ffcc00; /* Linia galbenă */
+        }
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            padding: 0 20px;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+        .logo { order: 2; display: flex; align-items: center; flex-shrink: 0; }
+        .logo img { height: 30px; margin-right: 5px; }
+        .nav-links-left, .nav-links-right { display: flex; gap: 15px; align-items: center; }
+        .nav-links-left a, .nav-links-right a, .nav-links-mobile a { color: #fff; transition: color 0.3s; }
+        .nav-links-left a:hover, .nav-links-right a:hover, .nav-links-mobile a:hover { color: #ffcc00; }
+        
+        /* Mobile Specifics */
+        .menu-toggle { display: none; font-size: 24px; cursor: pointer; order: 3; }
+        .nav-links-mobile { display: none; }
+        .nav-links-mobile.mobile-active { display: flex; flex-direction: column; width: 100%; position: absolute; top: 60px; left: 0; background-color: #111; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); }
+        .nav-links-mobile a { padding: 15px 20px; border-bottom: 1px solid #333; width: 100%; text-align: center;}
+        
+        @media (max-width: 900px) {
+            .nav-links-left, .nav-links-right { display: none !important; }
+            .menu-toggle { display: block; }
+        }
+
+        /* ==================================================== */
+        /* FORMULAR (Centrat) */
+        /* ==================================================== */
+        .main-content {
+            padding: 50px 20px;
+            min-height: calc(100vh - 100px); /* Asigură că se extinde pe tot ecranul */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Aliniat sus, sub navbar */
+        }
+
         .form-container {
             max-width: 400px;
-            margin: 100px auto 50px auto; /* Margin-top mare pentru a nu se suprapune cu navbar-ul */
             padding: 40px;
-            border: 1px solid #ccc;
+            background-color: #fff;
+            border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             text-align: center;
@@ -32,7 +89,7 @@
         .form-container h2 {
             text-transform: uppercase;
             margin-bottom: 25px;
-            color: #333;
+            color: #000;
         }
         .form-container input {
             width: 100%;
@@ -40,7 +97,7 @@
             margin-bottom: 15px;
             border: 1px solid #ddd;
             border-radius: 4px;
-            box-sizing: border-box; /* Asigură că padding-ul nu mărește lățimea */
+            box-sizing: border-box;
         }
         .form-container button {
             background-color: #000;
@@ -54,8 +111,10 @@
         .form-container button:hover {
             background-color: #333;
         }
-        
-        /* Asigură ca footer-ul să aibă culorile negru/alb (pentru paginile simple) */
+
+        /* ==================================================== */
+        /* FOOTER */
+        /* ==================================================== */
         footer {
             background-color: #333;
             color: #fff;
@@ -64,47 +123,12 @@
             font-size: 14px;
         }
         footer a {
-            color: #ffcc00; /* Link-uri galbene */
+            color: #ffcc00;
             text-decoration: none;
         }
         footer hr {
             border-color: rgba(255,255,255,0.2);
-        }
-
-        /* Stilurile pentru navbar unificat - copiate aici pentru siguranță */
-        .header {
-            background-color: #000;
-            color: #fff;
-            padding: 5px 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 3px solid #ffcc00;
-        }
-        .navbar {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between; 
-            align-items: center;
-            padding: 0 20px;
-            text-transform: uppercase;
-            font-size: 13px;
-        }
-        .logo { order: 2; display: flex; align-items: center; }
-        .logo img { height: 30px; margin-right: 5px; }
-        .nav-links-left, .nav-links-right { display: flex; gap: 15px; align-items: center; }
-        .nav-links-left a, .nav-links-right a { color: #fff; transition: color 0.3s; }
-        .nav-links-left a:hover, .nav-links-right a:hover { color: #ffcc00; }
-        .menu-toggle { display: none; font-size: 24px; cursor: pointer; order: 3; }
-        .nav-links-mobile { display: none; }
-        .nav-links-mobile a { color: #fff; padding: 15px 20px; border-bottom: 1px solid #333; width: 100%; text-align: center;}
-        .nav-links-mobile.mobile-active { display: flex; flex-direction: column; width: 100%; position: absolute; top: 60px; left: 0; background-color: #111; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); }
-        
-        @media (max-width: 900px) {
-            .nav-links-left, .nav-links-right { display: none !important; }
-            .menu-toggle { display: block; }
+            margin: 15px auto;
         }
     </style>
 </head>
@@ -155,25 +179,26 @@
         </div>
     </header>
 
-
-    <div class="form-container">
-        <h2>CREATE ACCOUNT</h2>
-        <form>
-            <input type="text" placeholder="Nume Complet" required>
-            <input type="email" placeholder="Adresă Email" required>
-            <input type="password" placeholder="Parolă" required>
-            <input type="password" placeholder="Confirmă Parola" required>
-            <button type="submit">Înregistrare</button>
-            <p style="margin-top: 15px;">Ai deja cont? <a href="login.html">Autentifică-te</a></p>
-        </form>
+    <div class="main-content">
+        <div class="form-container">
+            <h2>CREATE ACCOUNT</h2>
+            <form>
+                <input type="text" placeholder="Nume Complet" required>
+                <input type="email" placeholder="Adresă Email" required>
+                <input type="password" placeholder="Parolă" required>
+                <input type="password" placeholder="Confirmă Parola" required>
+                <button type="submit">Înregistrare</button>
+                <p style="margin-top: 15px; font-size: 14px;">Ai deja cont? <a href="login.html" style="color: #ffcc00;">Autentifică-te</a></p>
+            </form>
+        </div>
     </div>
-
+    
     <footer>
         <p>Give us a call on <strong>01694 751380</strong></p>
         <p>Send us an email at <a href="mailto:info@stormmachine.co.uk">info@stormmachine.co.uk</a></p>
         <p>Or fill out our <a href="contact.html">enquiry form</a> below</p>
 
-        <hr style="border-color: rgba(255,255,255,0.2);">
+        <hr>
 
         <p>Follow us</p>
         <p>© STORM MACHINE 2025</p>
