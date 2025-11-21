@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Storm Machine Entertainment - Jay's Bars Hire</title>
+    <title>Storm Machine Entertainment</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <style>
@@ -134,249 +134,32 @@
             color: #ffcc00;
         }
         
-        /* ==================================================== */
-        /* 4. JAY'S BARS SPECIFIC CSS */
-        /* ==================================================== */
-        
-        .bars-hero {
-            position: relative;
-            background-color: #1a1a1a; /* Dark background for bar theme */
-            padding: 50px 20px;
-            text-align: center;
-            color: #fff;
-        }
-
-        .bars-hero h1 {
-            font-size: 44px;
-            text-transform: uppercase;
-            margin: 0 0 10px;
-            color: #ffcc00; /* Gold accent */
-        }
-        
-        .bars-hero p {
-            max-width: 900px;
-            margin: 0 auto 20px;
-            font-size: 20px;
-        }
-        
-        .bars-info-grid {
-            max-width: 1200px;
-            margin: 40px auto;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-            text-align: center;
-        }
-        
-        .info-card {
-            flex-basis: calc(33% - 40px);
-            min-width: 280px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .info-card i {
-            font-size: 3em;
-            color: #0d83d1;
-            margin-bottom: 15px;
-        }
-        
-        .bar-product-grid {
-            max-width: 1200px;
-            margin: 50px auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 0 20px;
-        }
-
-        .bar-card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .bar-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .bar-card img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .bar-content {
-            padding: 25px;
-            text-align: left;
-        }
-        
-        .bar-content h3 {
-            color: #1a1a1a;
-            margin-top: 0;
-            font-size: 28px;
-        }
-        
-        .bar-content ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .bar-content ul li {
-            margin-bottom: 8px;
-            color: #555;
-        }
-
-        .cta-button {
-            display: block;
-            width: 100%;
-            padding: 14px 0;
-            margin-top: 20px;
-            background-color: #ffcc00;
-            color: #000;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-align: center;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        .cta-button:hover {
-            background-color: #e0b300;
-        }
-    </style>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
-    <header class="header">
-        <div class="navbar">
-            <div class="nav-links left-links">
-                <a href="marquees.html">MARQUEES</a>
-                <a href="discos.html">DISCOS</a>
-                <a href="jaysbars.html">JAY'S BARS</a> <a href="equipment.html">EQUIPMENT HIRE</a>
-                <a href="chairs.html">CHAIRS</a> 
-            </div>
-            
-            <div class="logo">
-                <a href="index.html"><img src="images/stormmachine-logo.png" alt="Storm Machine Logo" style="height: 30px;"></a>
-                <span>stormmachine</span>
-            </div>
-            
-            <div class="nav-links right-links">
-                <a href="login.html">LOGIN</a> 
-                <a href="register.html">REGISTER</a>
-                <a href="gallery.html">GALLERY</a>
-                <a href="information.html">INFORMATION</a>
-                <a href="testimonialspage.html">TESTIMONIALS</a> 
-                <a href="contact.html">CONTACT US</a>
-                <a href="#"><i class="fas fa-info-circle"></i></a>
-            </div>
-        </div>
-    </header>
+    <nav style="padding: 10px; background-color: #f0f0f0;">
+        <a href="index.html" style="margin-right: 15px;">🏠 Home</a>
+        <a href="chairs.html" style="margin-right: 15px;">Chairs</a>
+        <a href="testimonials.html" style="margin-right: 15px;">Testimonials</a>
+        <a href="contact_us.html" style="margin-right: 15px;">📞 Contact Us</a> 
+        <a href="welcomepage.html" style="margin-right: 15px;">⭐ Welcome</a>
+        <a href="login.html" style="margin-right: 15px;">Login</a>
+        <a href="register.html" style="margin-right: 15px;">Register</a>
+        <a href="read_users.html" style="margin-right: 15px;">Admin Panel</a>
+    </nav>
+    <hr>
+    <marquee direction="left" scrollamount="5" style="background-color: #ffcccc; color: #333; padding: 5px;">
+        Welcome! Don't forget to check out our Chairs section!
+    </marquee>
 
-    <section class="bars-hero">
-        <h1>Jay's Mobile Bars: Drinks for Every Event</h1>
-        <p>From custom cocktails to draft beer stations, we provide a complete, professional mobile bar service tailored to your party, wedding, or corporate function.</p>
-        <a href="contact.html" class="cta-button" style="width: 300px; margin: 20px auto 0; background-color: #0d83d1; color: #fff;">GET A CUSTOM BAR QUOTE</a>
-    </section>
-    
-    <section class="bars-info-grid">
-        <div class="info-card">
-            <i class="fas fa-cocktail"></i>
-            <h3>Custom Packages</h3>
-            <p>Dry hire, full service, cash bars, or inclusive drinks packages tailored to your budget and guest count.</p>
-        </div>
-        <div class="info-card">
-            <i class="fas fa-handshake"></i>
-            <h3>Professional Staff</h3>
-            <p>Experienced mixologists and friendly bar staff ensure smooth, efficient service from start to finish.</p>
-        </div>
-        <div class="info-card">
-            <i class="fas fa-beer"></i>
-            <h3>Fully Licensed</h3>
-            <p>We handle all necessary event licensing and insurance, giving you one less thing to worry about.</p>
-        </div>
-    </section>
-
-    <section class="product-grid-section">
-        <h2 style="text-align: center; margin-bottom: 40px; color: #1a1a1a;">Our Bar Styles</h2>
-        
-        <div class="bar-product-grid">
-            
-            <div class="bar-card">
-                <img src="images/bar-led.jpg" alt="LED Mobile Bar">
-                <div class="bar-content">
-                    <h3>Modular LED Bar</h3>
-                    <p>Modern and versatile. Our LED bar can be customized to any size and features remote-controlled lighting to match your event's colors.</p>
-                    <ul>
-                        <li><i class="fas fa-check-circle" style="color:#ffcc00;"></i> Highly customizable length</li>
-                        <li><i class="fas fa-check-circle" style="color:#ffcc00;"></i> RGB color changing lights</li>
-                        <li><i class="fas fa-check-circle" style="color:#ffcc00;"></i> Sleek, contemporary finish</li>
-                    </ul>
-                    <a href="contact.html" class="cta-button">Enquire About LED Bar Hire</a>
-                </div>
-            </div>
-
-            <div class="bar-card">
-                <img src="images/bar-rustic.jpg" alt="Rustic Wooden Bar">
-                <div class="bar-content">
-                    <h3>Rustic Wooden Bar</h3>
-                    <p>Perfect for marquee weddings, garden parties, or themed events. Crafted from reclaimed wood for a warm, charming aesthetic.</p>
-                    <ul>
-                        <li><i class="fas fa-check-circle" style="color:#ffcc00;"></i> Ideal for country & barn themes</li>
-                        <li><i class="fas fa-check-circle" style="color:#ffcc00;"></i> Available in 3m and 5m lengths</li>
-                        <li><i class="fas fa-check-circle" style="color:#ffcc00;"></i> Includes back bar storage</li>
-                    </ul>
-                    <a href="contact.html" class="cta-button">Enquire About Rustic Bar Hire</a>
-                </div>
-            </div>
-
-            <div class="bar-card">
-                <img src="images/cocktail-staff.jpg" alt="Professional Bartenders">
-                <div class="bar-content">
-                    <h3>Cocktail Staffing Service</h3>
-                    <p>Beyond the bar structure, hire our skilled staff. We provide everything from glassware to customized drinks menus.</p>
-                    <ul>
-                        <li><i class="fas fa-check-circle" style="color:#ffcc00;"></i> Cocktail Masterclass available</li>
-                        <li><i class="fas fa-check-circle" style="color:#ffcc00;"></i> Full stock/supply packages</li>
-                        <li><i class="fas fa-check-circle" style="color:#ffcc00;"></i> Uniformed, professional service</li>
-                    </ul>
-                    <a href="contact.html" class="cta-button">Hire Staff & Full Service</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-info">
-                <p><strong>CONTACT US</strong></p>
-                <p>CALL US: 0722 123 456</p>
-            </div>
-            <div class="footer-links">
-                <a href="marquees.html">MARQUEES</a>
-                <a href="discos.html">DISCOS</a>
-                <a href="jaysbars.html">JAY'S BARS</a>
-                <a href="equipment.html">EQUIPMENT HIRE</a>
-                <a href="information.html">INFORMATION</a>
-            </div>
-            <div class="footer-social">
-                <p>Follow us</p>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
-        </div>
-    </footer>
+    <h1>Welcome to Our Site!</h1>
+    <p>This is the main home page. Please use the navigation menu above.</p>
 
 </body>
 </html>
