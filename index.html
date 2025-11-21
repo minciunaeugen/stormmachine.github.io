@@ -8,26 +8,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <style>
-        /* ==================================================== */
+        /* ---------------------------------------------------- */
         /* GLOBAL CSS & NAVIGATION FIXES (CONSOLIDATED) */
-        /* ==================================================== */
+        /* ---------------------------------------------------- */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             padding-top: 60px; /* Space for fixed header */
-            background-color: #f8f8f8; /* Light background for content */
+            background-color: #f8f8f8;
             color: #333;
             line-height: 1.6;
             overflow-x: hidden;
         }
         
-        /* Ensures all images are responsive */
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
+        img { max-width: 100%; height: auto; display: block; }
 
         /* ---------------------------------------------------- */
         /* 1. HEADER & NAVIGATION - BASE STYLE (DESKTOP) */
@@ -40,124 +35,53 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            border-bottom: 3px solid #ffcc00; /* Yellow line */
+            border-bottom: 3px solid #ffcc00;
         }
         
         .navbar {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between; 
-            align-items: center;
-            padding: 0 20px;
-            text-transform: uppercase;
-            font-size: 13px;
-            box-sizing: border-box;
+            max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; 
+            align-items: center; padding: 0 20px; text-transform: uppercase; font-size: 13px; box-sizing: border-box;
         }
         
-        .logo {
-            display: flex;
-            align-items: center;
-            order: 2;
-            flex-shrink: 0;
-            margin: 0 10px;
-        }
-        .logo img {
-            height: 30px; 
-            margin-right: 5px;
-        }
+        .logo { display: flex; align-items: center; order: 2; flex-shrink: 0; margin: 0 10px; }
+        .logo img { height: 30px; margin-right: 5px; }
         
-        /* Desktop Links */
-        .nav-links-left, .nav-links-right {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-            flex-wrap: nowrap;
-        }
+        .nav-links-left, .nav-links-right { display: flex; gap: 15px; align-items: center; flex-wrap: nowrap; }
         .nav-links-left { order: 1; }
         .nav-links-right { order: 3; }
         
         .nav-links-left a, .nav-links-right a, .nav-links-mobile a {
-            color: #fff;
-            white-space: nowrap;
-            padding: 10px 0;
-            transition: color 0.3s;
-            text-decoration: none;
+            color: #fff; white-space: nowrap; padding: 10px 0; transition: color 0.3s; text-decoration: none;
         }
-        .nav-links-left a:hover, .nav-links-right a:hover, .nav-links-mobile a:hover {
-            color: #ffcc00;
-        }
+        .nav-links-left a:hover, .nav-links-right a:hover, .nav-links-mobile a:hover { color: #ffcc00; }
         
-        /* Mobile Buttons Hidden on Desktop */
-        .menu-toggle, .nav-links-mobile {
-            display: none;
-        }
+        .menu-toggle, .nav-links-mobile { display: none; }
 
         /* ---------------------------------------------------- */
         /* MEDIA QUERY: MOBILE STYLES (< 900px) */
         /* ---------------------------------------------------- */
         @media (max-width: 900px) {
             
-            .navbar {
-                justify-content: space-between;
-                flex-wrap: nowrap;
-            }
+            .navbar { justify-content: space-between; flex-wrap: nowrap; }
             
-            .nav-links-left, .nav-links-right {
-                display: none !important;
-            }
+            .nav-links-left, .nav-links-right { display: none !important; }
             
-            .menu-toggle {
-                display: block;
-                font-size: 24px;
-                cursor: pointer;
-                padding: 5px 10px;
-                order: 3;
-                color: #fff;
-            }
+            .menu-toggle { display: block; font-size: 24px; cursor: pointer; padding: 5px 10px; order: 3; color: #fff; }
 
-            .nav-links-mobile {
-                display: none; 
-                flex-direction: column;
-                width: 100%;
-                position: absolute;
-                top: 60px; 
-                left: 0;
-                background-color: #111;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            }
+            .nav-links-mobile { display: none; flex-direction: column; width: 100%; position: absolute; top: 60px; left: 0; background-color: #111; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); }
+            .nav-links-mobile.mobile-active { display: flex; }
 
-            .nav-links-mobile.mobile-active {
-                display: flex; 
-            }
-
-            .nav-links-mobile a {
-                padding: 15px 20px;
-                border-bottom: 1px solid #333;
-                width: 100%;
-                text-align: center;
-            }
+            .nav-links-mobile a { padding: 15px 20px; border-bottom: 1px solid #333; width: 100%; text-align: center; }
         }
         
         /* ---------------------------------------------------- */
         /* FOOTER STYLES */
         /* ---------------------------------------------------- */
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 30px 20px;
-            text-align: center;
-            font-size: 14px;
-        }
+        footer { background-color: #333; color: #fff; padding: 30px 20px; text-align: center; font-size: 14px; }
         footer a { color: #ffcc00; text-decoration: none; }
         footer hr { border-color: rgba(255,255,255,0.2); margin: 15px auto; }
         
-        /* Stiluri pentru secțiunea de conținut de bază */
-        .main-content {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
+        .main-content { max-width: 1200px; margin: 20px auto; padding: 0 20px; }
         
     </style>
 </head>
@@ -212,7 +136,7 @@
     <main class="main-content">
         
         <h1>Welcome to Storm Machine</h1>
-        <p>This is your homepage content area. You can add your carousel, hero image, and main marketing text here.</p>
+        <p>This is your homepage content area.</p>
         
         <div style="height: 800px; background-color: #ddd; text-align: center; padding-top: 50px;">
             [Placeholder for Hero Section / Carousel]
