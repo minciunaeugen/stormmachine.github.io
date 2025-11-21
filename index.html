@@ -330,6 +330,16 @@
         .modal-active {
             display: block;
         }
+        /* ASCUNDE MENIUL INIȚIAL */
+.nav-links-mobile {
+    display: none; 
+    /* ... alte stiluri pentru poziție (absolute, top: 60px) ... */
+}
+
+/* AFIȘEAZĂ MENIUL CÂND JAVASCRIPT ADAUGĂ CLASA */
+.nav-links-mobile.mobile-active {
+    display: flex; /* Sau block, în funcție de design. Flex este folosit pentru listă verticală. */
+}
     </style>
 </head>
 <body>
@@ -560,4 +570,5 @@
 </script>
 </body>
 </html>
+
 
