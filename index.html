@@ -6,6 +6,11 @@
     <title>Storm Machine Entertainment - Homepage</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <main>
+    <h1 id="cms-title">Loading title...</h1>
+    <p id="cms-description">Loading description...</p>
+    <a href="#contact" id="cms-button">Loading button text...</a>
+</main>
     
     <style>
        /* ==================================================== */
@@ -700,8 +705,35 @@ body {
         }
     });
 </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Path to the JSON file, relative to index.html
+        const jsonPath = '_data/home.json'; 
+
+        fetch(jsonPath)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load JSON file: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Insert the data into the HTML elements using their IDs
+                // Use || "" to prevent errors if a field is empty
+                document.getElementById('cms-title').textContent = data.main_title || "";
+                document.getElementById('cms-description').textContent = data.description || "";
+                document.getElementById('cms-button').textContent = data.button_text || "";
+                
+            })
+            .catch(error => {
+                console.error("An error occurred during JSON fetch:", error);
+                // Optionally show a message to the user or load default content
+            });
+    });
+</script>
 </body>
 </html>
+
 
 
 
