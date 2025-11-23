@@ -2,740 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Storm Machine Entertainment - Homepage</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <main>
-    <h1 id="cms-title">Loading title...</h1>
-    <p id="cms-description">Loading description...</p>
-    <a href="#contact" id="cms-button">Loading button text...</a>
-</main>
-    
-    <style>
-       /* ==================================================== */
-/* 1. BASE & HEADER STYLES (UPDATED) */
-/* ==================================================== */
-body {
-    padding-top: 60px; /* Space for fixed header */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    line-height: 1.6;
-    overflow-x: hidden; /* Prevents horizontal scrolling issues */
-}
-
-.header {
-    background-color: #000;
-    color: #fff;
-    padding: 5px 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.navbar {
-    max-width: 1200px; 
-    margin: 0 auto; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 0 20px; 
-    text-transform: uppercase; 
-    font-size: 13px; 
-    box-sizing: border-box;
-}
-
-.logo { 
-    display: flex; 
-    align-items: center; 
-    order: 2; /* Ensures logo stays in the center column on desktop */
-    flex-shrink: 0; 
-    margin: 0 10px; 
-}
-.logo img { 
-    height: 30px; 
-    margin-right: 5px; 
-}
-
-.nav-links { 
-    display: flex; 
-    gap: 15px; 
-    align-items: center; 
-    flex-wrap: nowrap; 
-}
-.nav-links-left { 
-    order: 1; 
-}
-.nav-links-right { 
-    order: 3; 
-}
-
-.nav-links a {
-    color: #fff; 
-    white-space: nowrap; 
-    padding: 10px 0; 
-    transition: color 0.3s; 
-    text-decoration: none;
-}
-.nav-links a:hover { 
-    color: #ffcc00; 
-}
-
-/* Hidden by default on desktop */
-.menu-toggle, .nav-links-mobile { 
-    display: none; 
-}
-
-/* ==================================================== */
-/* 9. MOBILE RESPONSIVENESS (NEW SECTION FOR SLIDING MENU) */
-/* ==================================================== */
-
-@media (max-width: 900px) {
-    /* Hide standard desktop links */
-    .nav-links-left, .nav-links-right { 
-        display: none !important; 
-    }
-    
-    /* Display Hamburger Icon */
-    .menu-toggle { 
-        display: block; 
-        font-size: 24px; 
-        cursor: pointer; 
-        padding: 5px 10px; 
-        order: 3; 
-        color: #fff; 
-        position: relative; 
-        z-index: 1001; /* Ensure button is above everything */
-    }
-
-    /* Mobile Menu Styling */
-    .nav-links-mobile { 
-        display: none; 
-        flex-direction: column; 
-        width: 100%; 
-        position: absolute; 
-        top: 60px; /* Below the main header bar */
-        left: 0; 
-        background-color: #111; 
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        transition: transform 0.3s ease-out; /* Smooth slide animation */
-        transform: translateY(-100%); /* Start off-screen */
-    }
-    
-    /* Class applied by JavaScript to show the menu */
-    .nav-links-mobile.mobile-active { 
-        display: flex;
-        transform: translateY(0); /* Slide into view */
-    }
-
-    .nav-links-mobile a { 
-        padding: 15px 20px; 
-        border-bottom: 1px solid #333; 
-        width: 100%; 
-        text-align: center; 
-        color: #fff;
-    }
-    
-    .nav-links-mobile a:last-child {
-        border-bottom: none;
-    }
-}
-
-        /* ==================================================== */
-        /* 2. HEADER & NAVIGATION */
-        /* ==================================================== */
-        .header {
-            background-color: #000;
-            color: #fff;
-            padding: 5px 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        .navbar {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-            text-transform: uppercase;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-links a {
-            padding: 0 10px;
-            font-size: 13px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #ffcc00;
-        }
-
-        .logo {
-            margin: 0 30px;
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            height: 30px; /* Adjust logo size */
-            margin-right: 5px;
-        }
-
-        /* ==================================================== */
-        /* 3. HERO SECTION */
-        /* ==================================================== */
-        .hero {
-            position: relative;
-            height: 500px; /* Fixed height */
-            /* IMPORTANT: Replace the URL below with your actual hero image path, e.g., url('images/hero-home.jpg') */
-            background-image: url('https://www.mesteresti.ro/uploads/4400/cort-profesional-evenimente-extra-ambrus_5-m_12-m_2%2C8-m_Alb_Party_Da_Da_60-m%C2%B2_peste-50_Otel.jpeg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            padding-bottom: 50px;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.3);
-        }
-
-        .hero-text {
-            z-index: 1;
-            color: #fff;
-            text-align: center;
-            text-transform: uppercase;
-        }
-
-        .hero-text h1 {
-            font-size: 28px;
-            margin: 0;
-            font-weight: 600;
-        }
-
-        .hero-text p {
-            font-size: 18px;
-            margin-top: 5px;
-            font-weight: 300;
-        }
-        
-        /* ==================================================== */
-        /* 4. INTRO & CONTENT */
-        /* ==================================================== */
-        .intro-section {
-            text-align: center;
-            padding: 40px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .intro-section p {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        /* ==================================================== */
-        /* 5. SERVICES GRID (The 6 boxes) */
-        /* ==================================================== */
-        .services-grid {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .service-box {
-            position: relative;
-            height: 250px;
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            display: flex;
-            align-items: flex-start;
-            padding: 20px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .service-box:hover {
-            transform: scale(1.02);
-        }
-
-        .service-box-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.4);
-        }
-
-        .service-content {
-            z-index: 1;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-
-        .service-content h3 {
-            font-size: 20px;
-            margin: 0;
-            font-weight: 600;
-        }
-
-        .arrow-icon {
-            font-size: 24px;
-        }
-
-        /* Specific styles for box backgrounds (REPLACE URLs with your local image paths if needed) */
-        #box-quote { background-image: url('https://eventstuff.ro/wp-content/uploads/2021/07/interior-cort-nunt-transparent.jpg'); }
-        #box-marquees { background-image: url('https://www.aristocrat-events.ro/wp-content/uploads/2024/08/image01-1024x768.jpeg'); }
-        #box-discos { background-image: url('https://eventstuff.ro/wp-content/uploads/2020/06/23.-corturi-pagoda-transparente-pt-nunta.jpeg'); }
-        #box-bars { background-image: url('https://platform.vegas.eater.com/wp-content/uploads/sites/24/chorus/uploads/chorus_asset/file/25878196/Partage_Le_Club__SabinOrr_005_HiRes.jpg?quality=90&strip=all&crop=16.666666666667%2C0%2C66.666666666667%2C100&w=2400'); }
-        #box-equipment { background-image: url('https://avantgarde.ro/wp-content/uploads/2024/04/81A_0368.jpg'); }
-        #box-gallery { background-image: url('https://thepalm.ro/wp-content/uploads/2023/05/The-Palm-40.jpg'); }
-
-        /* ==================================================== */
-        /* 6. TESTIMONIALS */
-        /* ==================================================== */
-        .testimonials {
-            text-align: center;
-            padding: 60px 20px;
-            background-color: #f7f7f7;
-        }
-
-        .testimonials h2 {
-            color: #0d83d1; /* Blue color */
-            font-weight: 600;
-        }
-
-        .testimonial-grid {
-            max-width: 800px;
-            margin: 20px auto;
-            display: flex;
-            justify-content: space-around;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 30px;
-        }
-
-        .testimonial-item {
-            flex-basis: 45%;
-            padding: 0 20px;
-        }
-
-        .testimonial-item h4 {
-            font-weight: bold;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-
-        .testimonial-item p {
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        .view-more-btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 10px 20px;
-            background-color: #0d83d1;
-            color: #fff;
-            text-transform: uppercase;
-            font-size: 14px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        .view-more-btn:hover {
-            background-color: #0a6bb8;
-        }
-
-        /* ==================================================== */
-        /* 7. FOOTER */
-        /* ==================================================== */
-        .footer {
-            background-color: #333;
-            color: #fff;
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-
-        .footer-info, .footer-links, .footer-social {
-            flex-basis: 30%;
-            text-align: left;
-        }
-
-        .footer-info p, .footer-links a, .footer-social a {
-            font-size: 13px;
-            margin: 5px 0;
-            display: block;
-        }
-
-        .footer-social {
-            text-align: right;
-        }
-
-        .footer-social i {
-            font-size: 20px;
-            margin-left: 10px;
-            transition: color 0.3s;
-        }
-        
-        .footer-social a:hover i {
-            color: #ffcc00; /* Hover effect for social icons */
-        }
-        
-        /* ==================================================== */
-        /* 8. MODAL/POPUP STYLES (Simplified) */
-        /* ==================================================== */
-        .modal-content {
-            display: none; /* Hidden by default */
-            position: fixed;
-            z-index: 2000; /* High Z-index to be on top */
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            max-width: 600px;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            border: 1px solid #ddd;
-            color: #333;
-        }
-        
-        .modal-content button {
-            background-color: #0d83d1;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-        
-        .modal-active {
-            display: block;
-        }
-        /* ASCUNDE MENIUL INIȚIAL */
-.nav-links-mobile {
-    display: none; 
-    /* ... alte stiluri pentru poziție (absolute, top: 60px) ... */
-}
-
-/* AFIȘEAZĂ MENIUL CÂND JAVASCRIPT ADAUGĂ CLASA */
-.nav-links-mobile.mobile-active {
-    display: flex; /* Sau block, în funcție de design. Flex este folosit pentru listă verticală. */
-}
-    </style>
-</head>
+    <title>Storm Machine Entertainment - Acasă</title>
+    </head>
 <body>
-
-    <header class="header">
-    <div class="navbar">
-        
-        <div class="nav-links nav-links-left">
-            <a href="marquees.html">MARQUEES</a>
-            <a href="discos.html">DISCOS</a>
-            <a href="jaysbars.html">JAY'S BARS</a>
-            <a href="equipment.html">EQUIPMENT HIRE</a>
-        </div>
-
-        <div class="logo">
-                <a href="index.html"><img src="images/stormmachine-logo.png" alt="Storm Machine Logo" style="height: 30px;"></a>
-                <span>stormmachine</span>
-            </div>
-        
-        </div>
+    <header>
+        <nav>
+            <a href="#">MARQUEES</a>
+            <a href="#">DISCOS</a>
+            <a href="#">JAYS BARS</a>
+            <a href="#">EQUIPMENT HIRE</a>
+            <a href="#">GALLERY</a>
+            <a href="#">INFORMATION</a>
+            <a href="#">CONTACT US</a>
+            </nav>
     </header>
-        
-        <div class="nav-links nav-links-right">
-            <a href="gallery.html">GALLERY</a>
-            <a href="information.html">INFORMATION</a>
-            <a href="contact.html">CONTACT US</a>
-            <a href="information.html"><i class="fas fa-info-circle"></i></a> 
-        </div>
 
-        <div class="menu-toggle" id="menuToggle">
-            <i class="fas fa-bars"></i>
-        </div>
-        
-    </div>
+    <main>
+        <section id="hero">
+            <h1>Storm Machine Entertainment</h1>
+            <p>Marquee, Discos, Bars and Equipment Hire for Weddings, Corporate Events & Parties [cite: 7]</p>
+            <button>Get a quote [cite: 12]</button>
+            <p>Storm Machine Entertainment are Shropshire's finest and experienced party organisers and entertainment providers. [cite: 11]</p>
+        </section>
 
-    <div class="nav-links-mobile" id="mobileMenu">
-        <a href="marquees.html">MARQUEES</a>
-        <a href="discos.html">DISCOS</a>
-        <a href="jaysbars.html">JAY'S BARS</a>
-        <a href="equipment.html">EQUIPMENT HIRE</a>
-        <a href="gallery.html">GALLERY</a>
-        <a href="information.html">INFORMATION</a>
-        <a href="contact.html">CONTACT US</a>
-    </div>
-</header>
+        <section id="services-grid">
+            <div>
+                <h2>Get a quote</h2>
+                <a href="#">></a>
+            </div>
+            <div>
+                <h2>Marquees</h2>
+                <a href="#">></a>
+            </div>
+            <div>
+                <h2>Discos</h2>
+                <a href="#">></a>
+            </div>
+            <div>
+                <h2>Jay's Bars</h2>
+                <a href="#">></a>
+            </div>
+            <div>
+                <h2>Equipment Hire</h2>
+                <a href="#">></a>
+            </div>
+            <div>
+                <h2>Gallery</h2>
+                <a href="#">></a>
+            </div>
+        </section>
 
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-text">
-            <h1>Marquee, Discos, Bars and Equipment Hire for</h1>
-            <p>Weddings, Corporate Events & Parties</p>
-        </div>
-    </section>
+        <section id="testimonials">
+            <h2>Testimonials [cite: 24]</h2>
+            <h3>What our clients said [cite: 25]</h3>
+            <blockquote>
+                <p>"Thank you for everything! We had the most fantastic weekend and you and your team really pulled out all the stops for us. Sincere thanks and we will certainly be recommending you to all of our friends." [cite: 26, 27, 28]</p>
+            </blockquote>
+            <button>VIEW MORE [cite: 38]</button>
+        </section>
 
-    <section class="intro-section">
-        <p>
-            Whether you are planning your wedding, birthday or corporate event, or need a 
-            marquee, disco, bar or equipment hire, **Storm Machine Entertainment** can provide
-            the perfect solution for you.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-            id est laborum.
-        </p>
-    </section>
+        <section id="quick-contact">
+            <h2>CONTACT US [cite: 33]</h2>
+            <p>CALL US [cite: 34]</p>
+            <p>01694 751380 [cite: 35]</p>
+        </section>
+    </main>
 
-    <section class="services-grid">
-        <a href="#quote-modal" class="service-box" id="box-quote" onclick="showModal('quote-modal')">
-            <div class="service-box-overlay"></div>
-            <div class="service-content">
-                <h3>Get a Quote</h3>
-                <i class="fas fa-arrow-right arrow-icon"></i>
-            </div>
-        </a>
-
-        <a href="marquees.html" class="service-box" id="box-marquees">
-            <div class="service-box-overlay"></div>
-            <div class="service-content">
-                <h3>Marquees</h3>
-                <i class="fas fa-arrow-right arrow-icon"></i>
-            </div>
-        </a>
-
-        <a href="discos.html" class="service-box" id="box-discos">
-            <div class="service-box-overlay"></div>
-            <div class="service-content">
-                <h3>Discos</h3>
-                <i class="fas fa-arrow-right arrow-icon"></i>
-            </div>
-        </a>
-
-        <a href="#bar-modal" class="service-box" id="box-bars" onclick="showModal('bar-modal')">
-            <div class="service-box-overlay"></div>
-            <div class="service-content">
-                <h3>Jay's Bars</h3>
-                <i class="fas fa-arrow-right arrow-icon"></i>
-            </div>
-        </a>
-
-        <a href="equipment.html" class="service-box" id="box-equipment">
-            <div class="service-box-overlay"></div>
-            <div class="service-content">
-                <h3>Equipment Hire</h3>
-                <i class="fas fa-arrow-right arrow-icon"></i>
-            </div>
-        </a>
-
-        <a href="#gallery-modal" class="service-box" id="box-gallery" onclick="showModal('gallery-modal')">
-            <div class="service-box-overlay"></div>
-            <div class="service-content">
-                <h3>Gallery</h3>
-                <i class="fas fa-arrow-right arrow-icon"></i>
-            </div>
-        </a>
-    </section>
-
-    <section class="testimonials">
-        <h2>Testimonials</h2>
-        <p>What our clients said</p>
-        <div class="testimonial-grid">
-            <div class="testimonial-item">
-                <h4>Thank you for everything!</h4>
-                <p>We had the most amazing time and you and your team really pulled out all the stops for us!</p>
-                <p>Sincere thanks and we will certainly be recommending you to all of our friends.</p>
-            </div>
-            <div class="testimonial-item">
-                <h4>Exceptional Service!</h4>
-                <p>From the first contact to the final dismantle, the team was professional and the marquee was stunning. Highly recommended!</p>
-                <p>Made our wedding day perfect. Thank you!</p>
-            </div>
-        </div>
-        <a href="testimonialspage.html" class="view-more-btn">View More &rarr;</a>
-    </section>
-    
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-info">
-                <p><strong>CONTACT US</strong></p>
-                <p>CALL US: 0722 123 456</p>
-            </div>
-            <div class="footer-links">
-                <a href="marquees.html">MARQUEES</a>
-                <a href="discos.html">DISCOS</a>
-                <a href="jaysbars.html">JAYS BARS</a>
-                <a href="equipment.html">EQUIPMENT HIRE</a>
-                <a href="information.html">INFORMATION</a>
-            </div>
-            <div class="footer-social">
-                <p>Follow us</p>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
-        </div>
+    <footer>
+        <p>stormmachine [cite: 39]</p>
+        <nav>
+            <a href="#">MARQUEES</a>
+            <a href="#">DISCOS</a>
+            <a href="#">JAYS BARS</a>
+            <a href="#">EQUIPMENT HIRE</a>
+            <a href="#">GALLERY</a>
+            <a href="#">INFORMATION</a>
+        </nav>
+        <p>Follow us [cite: 40]</p>
     </footer>
-
-    <div id="bar-modal" class="modal-content">
-        <h2>Jay's Bar Drinks List</h2>
-        <div id="bar-content">
-            <h3>Alcohol</h3>
-            <p><strong>Wine:</strong> White, red and rosé, depending on the preferences of the guests and the season.</p>
-            <p><strong>Champagne or sparkling wine:</strong> Mandatory at the beginning of the event.</p>
-            <p><strong>Spirits:</strong> Vodka, whiskey, gin, rum, tequila. Liqueur, whiskey cream.</p>
-            <hr>
-            <h3>Non-alcoholic</h3>
-            <p><strong>Water:</strong> Still and mineral.</p>
-            <p><strong>Juices:</strong> Natural and carbonated.</p>
-        </div>
-        <button onclick="closeModal('bar-modal')" style="margin-top: 20px;">Close</button>
-    </div>
-
-    <div id="quote-modal" class="modal-content">
-        <h2>Request a Quote</h2>
-        <p>Please complete the form below to receive a personalized quote.</p>
-        <form action="contact.html" method="GET">
-            <input type="text" placeholder="Full Name" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc;" required><br>
-            <input type="email" placeholder="Email Address" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc;" required><br>
-            <textarea placeholder="Event Details (date, location, number of guests, type of service)" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc;"></textarea><br>
-            <button type="submit">Submit Request</button>
-        </form>
-        <button onclick="closeModal('quote-modal')" style="margin-top: 20px;">Close</button>
-    </div>
-
-    <div id="gallery-modal" class="modal-content">
-        <h2>Photo Gallery</h2>
-        <div id="gallery-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-             <img src="https://www.studiofotobucuresti.ro/wp-content/uploads/2021/09/Cabina-lux-foto-pentru-evenimente.jpg" alt="Photo Booth">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkFk4hyyWug_KgmPWBCa8Tc3T5lVOXolWHFg&s" alt="Event Decor">
-        </div>
-        <button onclick="closeModal('gallery-modal')" style="margin-top: 20px;">Close</button>
-    </div>
-
-    <script>
-        function showModal(modalId) {
-            const modal = document.getElementById(modalId);
-            
-            // Close all open modals first
-            document.querySelectorAll('.modal-content').forEach(m => m.classList.remove('modal-active'));
-            
-            // Open the desired modal
-            if (modal) {
-                modal.classList.add('modal-active');
-            }
-        }
-
-        function closeModal(modalId) {
-            document.getElementById(modalId).classList.remove('modal-active');
-        }
-
-        // Close modal when clicking outside (on the window)
-        window.onclick = function(event) {
-            document.querySelectorAll('.modal-content').forEach(modal => {
-                if (event.target == modal) {
-                    modal.classList.remove('modal-active');
-                }
-            });
-        }
-    </script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // 1. Selecția elementelor prin ID-ul lor
-        const menuToggle = document.getElementById('menuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        if (menuToggle && mobileMenu) {
-            // 2. Adaugă un ascultător de eveniment pe butonul hamburger
-            menuToggle.addEventListener('click', function() {
-                
-                // 3. Toggle (schimbă starea) clasei mobile-active pe meniul glisant
-                // Clasa 'mobile-active' este cea care, prin CSS, face meniul vizibil (display: flex)
-                mobileMenu.classList.toggle('mobile-active');
-                
-                // 4. Schimbă iconița (fa-bars <-> fa-times/X)
-                const icon = this.querySelector('i');
-                if (mobileMenu.classList.contains('mobile-active')) {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-times'); // Iconița X (Închide)
-                } else {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars'); // Iconița bare (Meniu)
-                }
-            });
-        }
-    });
-</script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Path to the JSON file, relative to index.html
-        const jsonPath = '_data/home.json'; 
-
-        fetch(jsonPath)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Failed to load JSON file: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                // Insert the data into the HTML elements using their IDs
-                // Use || "" to prevent errors if a field is empty
-                document.getElementById('cms-title').textContent = data.main_title || "";
-                document.getElementById('cms-description').textContent = data.description || "";
-                document.getElementById('cms-button').textContent = data.button_text || "";
-                
-            })
-            .catch(error => {
-                console.error("An error occurred during JSON fetch:", error);
-                // Optionally show a message to the user or load default content
-            });
-    });
-</script>
 </body>
 </html>
-
-
-
-
-
-
