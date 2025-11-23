@@ -3,189 +3,159 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Storm Machine — Events & Hire (Demo)</title>
+  <title>Storm Machine — Demo</title>
 
-  <!-- Google font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- Small accessible favicon (optional) -->
-  <meta name="theme-color" content="#0b3a57" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="topbar">
-      <nav class="nav">
+    <div class="nav-wrap">
+      <nav class="nav container">
         <ul class="nav-left">
-          <li><a href="#">Marquees</a></li>
-          <li><a href="#">Discos</a></li>
-          <li><a href="#">Jay's Bars</a></li>
-          <li><a href="#">Equipment Hire</a></li>
+          <li><a href="#">MARQUEES</a></li>
+          <li><a href="#">DISCOS</a></li>
+          <li><a href="#">JAY'S BARS</a></li>
+          <li><a href="#">EQUIPMENT HIRE</a></li>
         </ul>
 
         <div class="logo">
-          <!-- replace with your SVG/logo image -->
-          <img src="https://via.placeholder.com/220x60?text=Storm+Machine+Logo" alt="Storm Machine logo">
+          <img src="https://via.placeholder.com/220x60?text=Logo" alt="Storm Machine">
         </div>
 
         <ul class="nav-right">
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">Information</a></li>
-          <li><a class="btn-contact" href="#">Contact Us</a></li>
+          <li><a href="#">GALLERY</a></li>
+          <li><a href="#">INFORMATION</a></li>
+          <li><a class="contact-btn" href="#">CONTACT US</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero / slider section -->
   <section class="hero" aria-label="Hero">
-    <!-- background images can be swapped via JS or CSS; using single static image for demo -->
-    <div class="hero-inner">
-      <div class="hero-copy">
-        <p class="kicker">Marquee, Discos, Bars and Equipment Hire for</p>
-        <h1>Weddings, Corporate Events & Parties</h1>
-        <p class="hero-sub">Marquee, discos, bars and equipment hire for events of all sizes</p>
-      </div>
+    <div class="hero-bg" id="hero-bg"></div>
+
+    <div class="hero-content container">
+      <p class="kicker">Marquee, Discos, Bars and Equipment Hire for</p>
+      <h1>Weddings, Corporate Events & Parties</h1>
+      <p class="hero-sub">Storm Machine Entertainment are Shropshire's finest and experienced party organisers and entertainment providers.</p>
     </div>
 
     <div class="hero-dots" role="tablist" aria-label="Hero slides">
-      <button class="dot active" aria-label="Slide 1"></button>
-      <button class="dot" aria-label="Slide 2"></button>
-      <button class="dot" aria-label="Slide 3"></button>
+      <button class="dot active" aria-label="Slide 1" data-index="0"></button>
+      <button class="dot" aria-label="Slide 2" data-index="1"></button>
+      <button class="dot" aria-label="Slide 3" data-index="2"></button>
     </div>
   </section>
 
-  <!-- Intro -->
-  <section class="intro">
-    <div class="container">
-      <p class="lead">Storm Machine Entertainment are Shropshire's finest and experienced party organisers and entertainment providers.</p>
-    </div>
-  </section>
+  <main>
+    <section class="tiles container" aria-label="Services">
+      <a class="tile" href="#">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop" alt="Get a quote">
+        <div class="tile-overlay">
+          <h3>Get a quote</h3>
+        </div>
+        <span class="tile-arrow">›</span>
+      </a>
 
-  <!-- Grid of service tiles -->
-  <section class="tiles container" aria-label="Services">
-    <a class="tile" href="#">
-      <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="">
-      <div class="tile-overlay">
-        <h3>Get a quote</h3>
+      <a class="tile" href="#">
+        <img src="https://images.unsplash.com/photo-1473186578172-c141e6798cf4?q=80&w=800&auto=format&fit=crop" alt="Marquees">
+        <div class="tile-overlay"><h3>Marquees</h3></div>
+        <span class="tile-arrow">›</span>
+      </a>
+
+      <a class="tile" href="#">
+        <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?q=80&w=800&auto=format&fit=crop" alt="Discos">
+        <div class="tile-overlay"><h3>Discos</h3></div>
+        <span class="tile-arrow">›</span>
+      </a>
+
+      <a class="tile" href="#">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop" alt="Jay's Bars">
+        <div class="tile-overlay"><h3>Jay's Bars</h3></div>
+        <span class="tile-arrow">›</span>
+      </a>
+
+      <a class="tile" href="#">
+        <img src="https://images.unsplash.com/photo-1542327897-7d80f0f0b9d5?q=80&w=800&auto=format&fit=crop" alt="Equipment Hire">
+        <div class="tile-overlay"><h3>Equipment Hire</h3></div>
+        <span class="tile-arrow">›</span>
+      </a>
+
+      <a class="tile" href="#">
+        <img src="https://images.unsplash.com/photo-1507120410856-1f35574c3b45?q=80&w=800&auto=format&fit=crop" alt="Gallery">
+        <div class="tile-overlay"><h3>Gallery</h3></div>
+        <span class="tile-arrow">›</span>
+      </a>
+    </section>
+
+    <section class="description container">
+      <p>Whether you are planning your wedding, birthday or corporate event, or need a marquee, bar, disco or fireworks — Storm Machine Entertainment will go the extra mile for you.</p>
+      <p class="muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </section>
+
+    <section class="testimonials container" aria-label="Testimonials">
+      <h2>Testimonials</h2>
+      <p class="subhead">What our clients said</p>
+
+      <div class="test-grid">
+        <blockquote class="testimonial left">
+          <p>“Thank you for everything! We had the most fantastic weekend and you and your team really pulled out all the stops for us.”</p>
+          <footer>— Happy client</footer>
+        </blockquote>
+
+        <blockquote class="testimonial right">
+          <p>“Thank you for everything! We had the most fantastic weekend and you and your team really pulled out all the stops for us.”</p>
+          <footer>— Another satisfied customer</footer>
+        </blockquote>
       </div>
-      <span class="tile-arrow" aria-hidden="true">›</span>
-    </a>
 
-    <a class="tile" href="#">
-      <img src="https://images.unsplash.com/photo-1473186578172-c141e6798cf4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="">
-      <div class="tile-overlay"><h3>Marquees</h3></div>
-      <span class="tile-arrow" aria-hidden="true">›</span>
-    </a>
+      <div class="center">
+        <a class="btn-view" href="#">VIEW MORE</a>
+      </div>
+    </section>
+  </main>
 
-    <a class="tile" href="#">
-      <img src="https://images.unsplash.com/photo-1506152983158-1f9af5c1f3b7?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="">
-      <div class="tile-overlay"><h3>Discos</h3></div>
-      <span class="tile-arrow" aria-hidden="true">›</span>
-    </a>
-
-    <a class="tile" href="#">
-      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="">
-      <div class="tile-overlay"><h3>Jay's Bars</h3></div>
-      <span class="tile-arrow" aria-hidden="true">›</span>
-    </a>
-
-    <a class="tile" href="#">
-      <img src="https://images.unsplash.com/photo-1542327897-7d80f0f0b9d5?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="">
-      <div class="tile-overlay"><h3>Equipment Hire</h3></div>
-      <span class="tile-arrow" aria-hidden="true">›</span>
-    </a>
-
-    <a class="tile" href="#">
-      <img src="https://images.unsplash.com/photo-1507120410856-1f35574c3b45?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="">
-      <div class="tile-overlay"><h3>Gallery</h3></div>
-      <span class="tile-arrow" aria-hidden="true">›</span>
-    </a>
-  </section>
-
-  <!-- Rich text / description -->
-  <section class="description container">
-    <p>Whether you are planning your wedding, birthday or corporate event, or need a marquee, bar, disco or fireworks Storm Machine Entertainment will go that extra mile for you.</p>
-
-    <p class="muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="testimonials container" aria-label="Testimonials">
-    <h2>Testimonials</h2>
-    <p class="subhead">What our clients said</p>
-
-    <div class="test-grid">
-      <blockquote class="testimonial">
-        <p>"Thank you for everything! We had the most fantastic weekend and you and your team really pulled out all the stops for us."</p>
-        <footer>— Happy client</footer>
-      </blockquote>
-
-      <blockquote class="testimonial">
-        <p>"Thank you for everything! We had the most fantastic weekend and you and your team really pulled out all the stops for us."</p>
-        <footer>— Another satisfied customer</footer>
-      </blockquote>
-    </div>
-
-    <div class="center">
-      <a class="btn btn-outline" href="#">View more</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-col">
+    <div class="container footer-inner">
+      <div class="footer-left">
         <h4>Contact us</h4>
-        <p>Call us: 01952 711000</p>
-        <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+        <p>Call us: <strong>01952 711000</strong></p>
+        <p><a href="mailto:info@example.com">info@example.com</a></p>
       </div>
 
-      <div class="footer-col">
-        <h4>Follow us</h4>
-        <p class="socials">
-          <a href="#" aria-label="Facebook">FB</a>
-          <a href="#" aria-label="Twitter">TW</a>
-          <a href="#" aria-label="Instagram">IG</a>
-        </p>
-      </div>
-
-      <div class="footer-col footer-logo">
-        <img src="https://via.placeholder.com/120x60?text=Logo" alt="Storm Machine Logo">
+      <div class="footer-right">
+        <img src="https://via.placeholder.com/120x60?text=Logo" alt="Storm Machine">
+        <p class="follow">Follow us</p>
       </div>
     </div>
 
-    <div class="copyright">
+    <div class="footer-bottom">
       <div class="container">
-        <small>© <span id="year"></span> Storm Machine Entertainment — Demo layout</small>
+        <small>© <span id="year"></span> Storm Machine Entertainment — Demo</small>
       </div>
     </div>
   </footer>
 
   <script>
-    // small helpers: set year & hero slide buttons (demo only)
+    // set year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Demo: allow clicking dots to change background image (swap class)
-    const hero = document.querySelector('.hero');
+    // Hero slide demo
+    const heroBg = document.getElementById('hero-bg');
     const dots = document.querySelectorAll('.dot');
     const images = [
-      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1500&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder',
-      'https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?q=80&w=1500&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder',
-      'https://images.unsplash.com/photo-1496386466941-0b9f20a4a2b6?q=80&w=1500&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder'
+      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?q=80&w=1600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1496386466941-0b9f20a4a2b6?q=80&w=1600&auto=format&fit=crop'
     ];
 
     function setSlide(i) {
-      hero.style.backgroundImage = 'linear-gradient(rgba(4,18,28,0.45), rgba(4,18,28,0.45)), url(' + images[i] + ')';
+      heroBg.style.backgroundImage = "linear-gradient(180deg, rgba(4,18,28,0.25), rgba(4,18,28,0.55)), url('" + images[i] + "')";
       dots.forEach(d => d.classList.remove('active'));
       dots[i].classList.add('active');
     }
-
-    dots.forEach((d, idx) => d.addEventListener('click', () => setSlide(idx)));
-
-    // initialize
+    dots.forEach((d) => d.addEventListener('click', (e) => setSlide(Number(e.currentTarget.dataset.index))));
     setSlide(0);
   </script>
 </body>
